@@ -1,0 +1,21 @@
+from turtle import Turtle
+FONT = ("Courier",18,"normal")
+class Score(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.level = 1
+        self.hideturtle()
+        self.penup()
+        self.goto(-280,250)
+        self.update_scoreboard()
+    def update_scoreboard(self):
+        self.write(f"Level : {self.level}",align = "Left",font = FONT)
+    def update_score(self):
+        self.clear()
+        self.level += 1
+        self.update_scoreboard()
+    def Final_score(self):
+        self.goto(0,0)
+        self.write(f"GAME OVER!",align = "Center",font = FONT)
+    
+        
