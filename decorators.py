@@ -16,8 +16,9 @@ def welcome (func):
         print("Good Morning")
         func(name)
         print("Have a Nice Day!")
-    return wrapper
 @welcome
 def std_name(name):
     print("My name is ",name)
 std_name("Ananya B M")
+
+
